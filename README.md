@@ -1,77 +1,107 @@
 # Betting Odds Probability Analysis
 
-This project explores the relationship between betting odds and probabilities using basic concepts from statistics and data science.
+This project explores how betting odds can be translated into probabilities and used to evaluate bets using basic statistical and data science techniques.
 
-The goal is to understand how odds can be interpreted, how to evaluate bets, and how simple models can be used to estimate match outcomes.
-
----
-
-## Concepts
-
-The following concepts were applied in this project:
-
-- Conversion of decimal odds into implied probabilities  
-- Expected Value (EV) calculation to evaluate bets  
-- Logistic function to model win probability  
-- Poisson distribution to estimate the number of goals  
-- Monte Carlo simulation to approximate match results  
+The objective is to demonstrate how simple models can be applied to estimate match outcomes and support decision-making in a betting context.
 
 ---
 
-## Implementation
+## Overview
 
-The project was developed in Python using:
+In sports betting, odds represent implied probabilities of events. However, these probabilities can be analysed, adjusted, and compared with model-based estimates.
 
-- NumPy  
-- Pandas  
-- Matplotlib  
+This project implements a small analytical pipeline that:
 
-The code includes:
+- Converts betting odds into probabilities  
+- Calculates expected value (EV)  
+- Models win probability using a logistic function  
+- Estimates score distributions using a Poisson model  
+- Simulates match outcomes using Monte Carlo methods  
 
-- Conversion of betting odds into probabilities  
-- Calculation of expected value  
-- A simple logistic model for win probability  
-- A Poisson model to estimate score distributions  
-- Simulation of matches using random sampling  
+---
+
+## Methodology
+
+### 1. Odds to Probability
+
+Decimal odds are converted into implied probabilities:
+
+Probability = 1 / Odds
+
+---
+
+### 2. Expected Value
+
+Expected Value (EV) is used to evaluate if a bet is favourable:
+
+EV = (Probability × Odds) - 1
+
+---
+
+### 3. Logistic Model
+
+A logistic function is used to model the probability of winning based on goal difference.
+
+---
+
+### 4. Poisson Distribution
+
+The Poisson distribution is used to model the number of goals scored by each team and generate a score probability matrix.
+
+---
+
+### 5. Monte Carlo Simulation
+
+Match outcomes are simulated multiple times to approximate:
+
+- Home win probability  
+- Draw probability  
+- Away win probability  
 
 ---
 
 ## Results
 
-### Logistic Regression
+### Win Probability Model
 
-![Logistic Regression](logistic_curve.png)
+![Win Probability](logistic_curve.png)
 
-This graph shows how the probability of winning changes depending on the difference in goals between two teams.
-
----
-
-### Poisson Model
-
-![Poisson Matrix](poisson_matrix.png)
-
-This matrix represents the probability of each possible score using the Poisson distribution.
+This curve shows how the probability of winning varies with goal difference.
 
 ---
 
-## Observations
+### Score Distribution
+
+![Score Matrix](poisson_matrix.png)
+
+This matrix represents the probability of each possible score using the Poisson model.
+
+---
+
+## Key Insights
 
 - Betting odds can be interpreted as probabilities  
-- Expected Value helps identify whether a bet is favorable  
-- The Poisson distribution is useful for modelling football scores  
-- Simulation results are consistent with the calculated probabilities  
+- Expected Value helps identify profitable bets  
+- The Poisson distribution is effective for modelling football scores  
+- Simulated results align with analytical estimates  
 
 ---
 
-## How to run
+## Technologies
 
-Install the required libraries:
+- Python  
+- NumPy  
+- Pandas  
+- Matplotlib  
+
+---
+
+## How to Run
+
+Install dependencies:
 
 ```bash
 pip install numpy pandas matplotlib
-
----
-
 ## Author
 
 Fábio Gonçalves  
