@@ -102,7 +102,9 @@ Install dependencies:
 
 ```bash
 pip install numpy pandas matplotlib
-## Author
+```
+Run the script:
 
-Fábio Gonçalves  
-BSc in Data Science – ISCTE-IUL
+```bash
+python analysis.py
+```
