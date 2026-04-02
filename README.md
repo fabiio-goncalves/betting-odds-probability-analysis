@@ -69,3 +69,10 @@ Install the required libraries:
 
 ```bash
 pip install numpy pandas matplotlib
+
+---
+
+## Author
+
+Fábio Gonçalves  
+BSc in Data Science – ISCTE-IUL
